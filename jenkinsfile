@@ -1,0 +1,42 @@
+pipeline {
+  environment {
+    registry = "bafss2020/rotary_fe_dev"
+    registryCredential = 'Docker-hub'
+    dockerImage = ''
+    VERSION= 'latest'
+  }  
+  agent any
+
+  tools {nodejs "nodejs"}
+
+  stages { 
+  
+
+    
+    stage('Install dependencies') {
+      steps {
+        sh 'npm i --force'
+      }
+    }
+
+
+    stage('Building docker image') {
+      steps{
+        script {
+          dockerImage = docker.build registry + ":${VERSION}"
+        }
+      }
+    }
+    
+    stage('push docker Image') {
+      steps{
+        script {
+          docker.withRegistry( '', registryCredential ) {
+            dockerImage.push()
+          }
+        }
+      }
+    }        
+  }
+}
+

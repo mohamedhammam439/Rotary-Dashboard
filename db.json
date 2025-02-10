@@ -1,0 +1,300 @@
+{
+  "clubsData": [
+    {
+      "name": "al ahly",
+      "location": "nasr-city",
+      "district": "egypt",
+      "id": "6c8f"
+    },
+    {
+      "name": "al gizera",
+      "location": "masr el gdeda",
+      "district": "egypt",
+      "id": "ee12"
+    },
+    {
+      "name": "al zamalek",
+      "location": "100 oaba",
+      "district": "egypt",
+      "id": "d053"
+    },
+    {
+      "id": "952f",
+      "name": "siko",
+      "location": "maadi",
+      "district": "egypt"
+    },
+    {
+      "id": "b8b0",
+      "name": "nnnnn",
+      "location": "nnnnn",
+      "district": "egypt"
+    },
+    {
+      "id": "54d6",
+      "name": "omar",
+      "location": "altagom3",
+      "district": "egypt"
+    },
+    {
+      "id": "49e7",
+      "name": "test",
+      "location": "test",
+      "district": "test"
+    },
+    {
+      "id": "51f8",
+      "name": "hhh",
+      "location": "hh",
+      "district": "hh"
+    }
+  ],
+  "membersData": [
+    {
+      "firstName": "mohamed",
+      "lastName": "hammam",
+      "memberId": "123456789",
+      "role": "admin",
+      "club": "al ahly",
+      "district": "egypt",
+      "id": "6327"
+    },
+    {
+      "firstName": "ali",
+      "lastName": "marzok",
+      "memberId": "958746321",
+      "role": "member",
+      "club": "al gizera",
+      "district": "egypt",
+      "id": "935f"
+    },
+    {
+      "firstName": "malek",
+      "lastName": "el swiefy",
+      "memberId": "587431269",
+      "role": "member",
+      "club": "al zamalek",
+      "district": "egypt",
+      "id": "388f"
+    },
+    {
+      "firstName": "ghada",
+      "lastName": "adel",
+      "memberId": "6874132649",
+      "role": "member",
+      "club": "al gizera",
+      "district": "egypt",
+      "id": "d245"
+    },
+    {
+      "id": "637d",
+      "firstName": "waleed",
+      "lastName": "mohamed",
+      "memberId": 4545454,
+      "role": "admin",
+      "club": "al gizera",
+      "district": "egypt"
+    },
+    {
+      "id": "2b9b",
+      "firstName": "dddd",
+      "lastName": "hemo",
+      "memberId": 3333,
+      "role": "admin",
+      "club": "siko",
+      "district": "egypt"
+    },
+    {
+      "id": "fc3c",
+      "firstName": "qw",
+      "lastName": "qw",
+      "memberId": 123,
+      "role": "other",
+      "club": "al gizera",
+      "district": "egypt"
+    },
+    {
+      "id": "ca97",
+      "firstName": "qe",
+      "lastName": "qe",
+      "memberId": 23232,
+      "role": "admin",
+      "club": "al zamalek",
+      "district": "egypt"
+    },
+    {
+      "id": "5811",
+      "firstName": "er",
+      "lastName": "re",
+      "memberId": 12345,
+      "role": "admin",
+      "club": "al zamalek",
+      "district": "egypt"
+    },
+    {
+      "id": "bbf0",
+      "firstName": "tg",
+      "lastName": "tg",
+      "memberId": 45,
+      "role": "admin",
+      "club": "al gizera",
+      "district": "egypt"
+    },
+    {
+      "id": "9bc8",
+      "firstName": "wwwww",
+      "lastName": "rr",
+      "memberId": 4444,
+      "role": "other",
+      "club": "al gizera",
+      "district": "egypt"
+    },
+    {
+      "id": "e05a",
+      "firstName": "fg",
+      "lastName": "fg",
+      "memberId": 44,
+      "role": "admin",
+      "club": "al zamalek",
+      "district": "egypt"
+    },
+    {
+      "id": "46c3",
+      "firstName": "tg",
+      "lastName": "tg",
+      "memberId": 678,
+      "role": "admin",
+      "club": "al zamalek",
+      "district": "egypt"
+    },
+    {
+      "id": "5532",
+      "firstName": "pp",
+      "lastName": "pp",
+      "memberId": 9999,
+      "role": "admin",
+      "club": "al zamalek",
+      "district": "egypt"
+    },
+    {
+      "id": "badb",
+      "firstName": "kjhgf",
+      "lastName": "ghjy",
+      "memberId": 4545454,
+      "role": "member",
+      "club": "al zamalek",
+      "district": ""
+    },
+    {
+      "id": "d350",
+      "firstName": "test",
+      "lastName": "yrrr",
+      "memberId": 595959959,
+      "role": "member",
+      "club": "test"
+    }
+  ],
+  "Admin": [
+    {
+      "email": "admin@rotary.com",
+      "password": "ae123456ae",
+      "id": "dfd4"
+    },
+    {
+      "email": "m@rotary.com",
+      "password": "a123456a",
+      "id": "8626"
+    }
+  ],
+  "events": [
+    {
+      "Pname": "Donation",
+      "owner": "Al Ahly club",
+      "location": "Nasr City",
+      "discription": "Remember when I said more on that later when we talk about params! Well, the time has come",
+      "image": null,
+      "date": "1/1/2024 , 2:10:00 AM",
+      "ticketMP": 100,
+      "ticketGP": 150,
+      "key": "1",
+      "id": "0a11"
+    },
+    {
+      "Pname": "Color festival",
+      "owner": "Al Gizera club",
+      "location": "Mohandesen",
+      "discription": "Remember when I said more on that later when we talk about params Well, the time has come",
+      "image": null,
+      "date": "1/1/2024 , 2:10:00 AM",
+      "ticketMP": 100,
+      "ticketGP": 150,
+      "key": "2",
+      "id": "5e1e"
+    },
+    {
+      "Pname": "Caring children",
+      "owner": "Al Zamalek club",
+      "location": "EL Doki",
+      "discription": "Remember when I said more on that later when we talk about params! Well, the time has come",
+      "image": null,
+      "date": "1/1/2024 , 2:10:00 AM",
+      "ticketMP": 100,
+      "ticketGP": 150,
+      "key": "3",
+      "id": "80ab"
+    },
+    {
+      "Pname": "playing football",
+      "owner": "Al Nasr club",
+      "location": "Obour",
+      "discription": "Remember when I said more on that later when we talk about params Well, the time has come",
+      "image": null,
+      "date": "1/1/2024 , 2:10:00 AM",
+      "ticketMP": 100,
+      "ticketGP": 150,
+      "key": "4",
+      "id": "cccc"
+    },
+    {
+      "id": "0b97",
+      "Pname": "Collaborate",
+      "owner": "Al gizera",
+      "discription": "Test test test",
+      "date": "6/27/2024, 12:00:00 PM",
+      "location": "Nasr city ",
+      "ticketMP": "100",
+      "ticketGP": "150",
+      "image": "file:///data/user/0/host.exp.exponent/cache/ExperienceData/%2540anonymous%252Frotary-b24adc5d-cbfd-4e19-9062-b2d46aa4dfdf/ImagePicker/0a8191ff-f4eb-403f-8034-c80e9a7baa30.jpeg"
+    },
+    {
+      "id": "d38c",
+      "Pname": "Tttttt",
+      "owner": "Tttt",
+      "discription": "Ggggggg",
+      "date": "7/10/2024, 3:15:00 AM",
+      "location": "Ttttt",
+      "ticketMP": "100",
+      "ticketGP": "200",
+      "image": "file:///data/user/0/host.exp.exponent/cache/ExperienceData/%2540anonymous%252Frotary-b24adc5d-cbfd-4e19-9062-b2d46aa4dfdf/ImagePicker/1db042c8-7619-45b9-8306-19a41d5be046.jpeg"
+    },
+    {
+      "id": "4de8",
+      "Pname": "Gggg",
+      "owner": "Tbtvrvr",
+      "discription": "Ggggg",
+      "date": "7/11/2024, 4:20:00 AM",
+      "location": "Thtbtbt",
+      "ticketMP": "200",
+      "ticketGP": "100",
+      "image": "file:///data/user/0/host.exp.exponent/cache/ExperienceData/%2540anonymous%252Frotary-b24adc5d-cbfd-4e19-9062-b2d46aa4dfdf/ImagePicker/cb277677-79a0-4ebc-916b-d79623a4e616.jpeg"
+    }
+  ],
+  "users": {
+    "name": "Mohamed Hammam",
+    "study": "Faculty of Engineering",
+    "sonOf": "Ahmed Hammam",
+    "rotarian": "2016",
+    "workAs": "Civil Engineer",
+    "avatar": "file:///data/user/0/host.exp.exponent/cache/ExperienceData/%2540anonymous%252Frotary-b24adc5d-cbfd-4e19-9062-b2d46aa4dfdf/ImagePicker/d92c2bd9-6a51-4c51-996d-42f833aed855.jpeg"
+  }
+}
