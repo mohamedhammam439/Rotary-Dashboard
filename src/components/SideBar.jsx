@@ -5,10 +5,14 @@ import { MyContext } from "../context/Mycontext";
 import Cookies from "js-cookie";
 
 export function MySideBar() {
-  const { setIsLogedIn, setAccessToken,refreshToken, setRefreshToken, profile } =
-    useContext(MyContext);
+  const {
+    setIsLogedIn,
+    setAccessToken,
+    refreshToken,
+    setRefreshToken,
+    profile,
+  } = useContext(MyContext);
   const accessToken = Cookies.get("accessToken");
-
   const Logout = () => {
     Cookies.remove("accessToken");
     Cookies.remove("refreshToken");
@@ -40,12 +44,15 @@ export function MySideBar() {
           <NavLink className="text-left" to="clubLayout">
             <Sidebar.Item>Clubs</Sidebar.Item>
           </NavLink>
-          <NavLink className="text-left" to="membersLayout">
-            <Sidebar.Item>Members</Sidebar.Item>
-          </NavLink>
-          {/* <NavLink className="text-left" to="clubmembersLayout">
-            <Sidebar.Item>Club Members</Sidebar.Item>
-          </NavLink> */}
+          {profile.role === "clubAdmin" ? (
+            <NavLink className="text-left" to="clubmembersLayout">
+              <Sidebar.Item>Members</Sidebar.Item>
+            </NavLink>
+          ) : (
+            <NavLink className="text-left" to="membersLayout">
+              <Sidebar.Item>Members</Sidebar.Item>
+            </NavLink>
+          )}
 
           <NavLink className="text-left" to="districtCommities">
             <Sidebar.Item>District Committees</Sidebar.Item>
@@ -59,20 +66,21 @@ export function MySideBar() {
             <Sidebar.Item>District Employees</Sidebar.Item>
           </NavLink>
           {profile.rotarianId === "13923851" ? (
-            <NavLink className="text-left" to="aboutUs">
-              <Sidebar.Item>About Us</Sidebar.Item>
-            </NavLink>
+            <>
+              <NavLink className="text-left" to="aboutUs">
+                <Sidebar.Item>About Us</Sidebar.Item>
+              </NavLink>
+              <NavLink className="text-left" to="governor">
+                <Sidebar.Item>Governor</Sidebar.Item>
+              </NavLink>
+
+              <NavLink className="text-left" to="governorHistory">
+                <Sidebar.Item>Governor History</Sidebar.Item>
+              </NavLink>
+            </>
           ) : null}
 
-          <NavLink className="text-left" to="governor">
-            <Sidebar.Item>Governor</Sidebar.Item>
-          </NavLink>
-
-          <NavLink className="text-left" to="governorHistory">
-            <Sidebar.Item>Governor History</Sidebar.Item>
-          </NavLink>
-
-          <NavLink className="text-left" onClick={() => Logout()}>
+          <NavLink className="text-left" to="/" onClick={() => Logout()}>
             <Sidebar.Item>Log Out</Sidebar.Item>
           </NavLink>
         </Sidebar.ItemGroup>

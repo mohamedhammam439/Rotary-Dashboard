@@ -9,7 +9,6 @@ import { MyContext } from "../../context/Mycontext";
 import ImportModal from "./importingModal";
 import Cookies from "js-cookie";
 
-
 export const ClubLayout = () => {
   const [sortedFiled, setSortedFiled] = useState(null);
   const [sortDirection, setSortDirection] = useState("desc");
@@ -19,16 +18,16 @@ export const ClubLayout = () => {
 
   const [openModal, setOpenModal] = useState(false);
 
-  const [displayedRowCount, setDisplayedRowCount] = useState(10);
-  const rowsToLoad = 5;
+  const [displayedRowCount, setDisplayedRowCount] = useState(50);
+  const rowsToLoad = 50;
 
-  const { allClubs, DeleteClub } = useContext(MyContext);
+  const { allClubs, DeleteClub, profile } = useContext(MyContext);
   const Clubs = allClubs;
   const navigate = useNavigate();
   const goRouteId = (clubId) => navigate(`/clubLayout/${clubId}`);
   const goRouteEditId = (clubId) => navigate(`/clubLayout/clubEdit/${clubId}`);
 
-  const role = Cookies.get('role')
+  const role = Cookies.get("role");
 
   const getSortedArray = (data) => {
     let sortedArray = Array.isArray(data) ? [...data] : [];
@@ -70,7 +69,8 @@ export const ClubLayout = () => {
   };
 
   const VisibleClubs = getSortedArray(Clubs).slice(0, displayedRowCount);
-console.log('Clubs length :>> ', Clubs.length);
+  console.log("Clubs length :>> ", Clubs.length);
+
   return (
     <>
       <div className="flex flex-row justify-between items-center h-24">
@@ -89,15 +89,21 @@ console.log('Clubs length :>> ', Clubs.length);
             onChange={handleSearch}
           />
         </div>
-        {role === 'clubAdmin' ? '' : <> <Button onClick={() => setOpenModal(true)}>
-            <h1>Import Clubs</h1>
-          </Button>
-        <Link to="addClub">
-          <Button>
-            <h1>Add Clubs</h1>
-          </Button>
-        </Link></> }
-       
+        {role === "clubAdmin" ? (
+          ""
+        ) : (
+          <>
+            {" "}
+            <Button onClick={() => setOpenModal(true)}>
+              <h1>Import Clubs</h1>
+            </Button>
+            <Link to="addClub">
+              <Button>
+                <h1>Add Clubs</h1>
+              </Button>
+            </Link>
+          </>
+        )}
       </div>
       <ImportModal openModal={openModal} setOpenModal={setOpenModal} />
       <div className="overflow-x-auto">
@@ -119,7 +125,7 @@ console.log('Clubs length :>> ', Clubs.length);
             </Table.HeadCell>
             <Table.HeadCell onClick={() => handleHeaderClick("name")}>
               <div className="flex items-center cursor-pointer">
-                 Club Name ({Clubs.length})
+                Club Name ({Clubs.length})
                 {sortedFiled === "name" && (
                   <span>
                     {sortDirection === "asc" ? (
@@ -176,7 +182,7 @@ console.log('Clubs length :>> ', Clubs.length);
                 className="bg-white dark:border-gray-700 dark:bg-gray-800 cursor-pointer"
                 key={club._id}
               >
-                 <Table.Cell onClick={() => goRouteId(club.clubId)}>
+                <Table.Cell onClick={() => goRouteId(club.clubId)}>
                   {club.clubId}
                 </Table.Cell>
                 <Table.Cell
@@ -193,17 +199,26 @@ console.log('Clubs length :>> ', Clubs.length);
                 <Table.Cell onClick={() => goRouteId(club.clubId)}>
                   {club.district}
                 </Table.Cell>
-                <Table.Cell className="flex items-center justify-start">
-                  <FiEdit
-                    color="#0e7490"
-                    onClick={() => goRouteEditId(club.clubId)}
-                    className="mr-8"
-                  />
-                  <RiDeleteBin6Fill
-                    color="red"
-                    onClick={() => DeleteClub(club.clubId)}
-                  />
-                </Table.Cell>
+              
+                  <Table.Cell className="flex items-center justify-start">
+                    {profile.role === 'clubAdmin' && club.clubId === profile.clubId ?  <FiEdit
+                      color="#0e7490"
+                      onClick={() => goRouteEditId(club.clubId)}
+                      className="mr-8"
+                    /> : ''}
+                      {profile.role === "admin" ?<FiEdit
+                      color="#0e7490"
+                      onClick={() => goRouteEditId(club.clubId)}
+                      className="mr-8"
+                    />: ''}
+                   
+                    {profile.role === "admin" ? <RiDeleteBin6Fill
+                      color="red"
+                      onClick={() => DeleteClub(club.clubId)}
+                    />: ''}
+                    
+                  </Table.Cell>
+              
               </Table.Row>
             ))}
           </Table.Body>

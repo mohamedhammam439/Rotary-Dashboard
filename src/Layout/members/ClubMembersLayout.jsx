@@ -28,9 +28,10 @@ export const ClubMembersLayout = () => {
   const rowsToLoad = 500;
 
   const [openModal, setOpenModal] = useState(false);
+  const [allUsers, setAllUsers] = useState([]);
 
-  const { allusers, accessToken, DeletUser} = useContext(MyContext);
-  const Members = allusers;
+  const { accessToken, DeletUser} = useContext(MyContext);
+  const Members = allUsers;
 
   const navigate = useNavigate();
   const goRouteId = (id) => navigate(`/membersLayout/${id}`);
@@ -51,6 +52,30 @@ export const ClubMembersLayout = () => {
     setOpenDelModal(false);
   };
   useEffect(() => {
+
+    const fetchMembersOfClub = async () => {
+      try {
+        const response = await axios.get(
+          "https://rotary.shakoush.xyz/users/all-user-for-clubAdmin",
+          {
+            headers: {
+              Authorization: `Bearer ${accessToken}`,
+            },
+          }
+        );
+        console.log("all members of club", response.data);
+        setAllUsers(response.data);
+      } catch (error) {
+        if (error.response && error.response.status === 401) {
+          // Access token expired, try refreshing it
+          refreshAccessToken();
+        } else {
+          // Handle other errors
+          console.error(error);
+        }
+      }
+    };
+    fetchMembersOfClub()
     axios
       .get("https://rotary.shakoush.xyz/clubs/"+ clubId, {
         headers: {

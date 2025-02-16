@@ -51,6 +51,7 @@ const router = createBrowserRouter(
       <Route path="ClubmembersLayout" element={<ClubMembersLayout />} />
       <Route path="membersLayout/:id" element={<MemberDetails />} />
       <Route path="membersLayout/addMember" element={<AddMember />} />
+      <Route path="ClubmembersLayout/addMember" element={<AddMember />} />
       <Route path="membersLayout/memberEdit/:id" element={<MemberEdit />} />
 
       <Route path="districtEmployee" element={<DistrictEmployee />} />

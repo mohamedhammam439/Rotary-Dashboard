@@ -7,7 +7,7 @@ import { MyContext } from "../../context/Mycontext";
 import { useNavigate } from "react-router-dom";
 
 export const AddMember = () => {
-  const { accessToken, allClubs, fetchAllUsers } = useContext(MyContext);
+  const { accessToken, allClubs, fetchAllUsers , profile } = useContext(MyContext);
   const navigate = useNavigate();
   const Clubs = allClubs;
 
@@ -364,12 +364,12 @@ export const AddMember = () => {
                         }
                       >
                         <option value="">Select</option>
-                        {Clubs.map((club, index) => (
+                        {profile.role === 'clubAdmin' ? <option value={profile.clubId}>{profile.club.name}</option> :( Clubs.map((club, index) => (
                           <option key={index} value={club.clubId}>
                             {club.name}
-                            {/* {club.clubId} */}
                           </option>
-                        ))}
+                        ))) }
+                       
                       </Select>
                     </div>
                   </div>

@@ -9,7 +9,7 @@ import CustomInput from "./input";
 export const MemberEdit = () => {
   const { id } = useParams();
   const [member, setMember] = useState();
-  const { accessToken, fetchAllUsers, allClubs } = useContext(MyContext);
+  const { accessToken, fetchAllUsers, allClubs , profile} = useContext(MyContext);
   const navigate = useNavigate();
   const Clubs = allClubs;
 
@@ -384,7 +384,7 @@ export const MemberEdit = () => {
                 </div>
                 <div className="flex flex-row justify-between mb-5">
                   <div className="flex flex-row">
-                    <div className="flex flex-row flex-wrap items-center	">
+                    {profile.role === 'clubAdmin' ? '' :  <div className="flex flex-row flex-wrap items-center	">
                       <div className="mb-2 w-32 ">
                         <Label htmlFor="clubId" value="Club" />
                       </div>
@@ -416,7 +416,8 @@ export const MemberEdit = () => {
                           ))}
                         </Select>
                       </div>
-                    </div>
+                    </div>}
+                   
                   </div>
                   {/* <div className="flex flex-row">
                                 <div className="flex flex-row flex-wrap items-center	">
