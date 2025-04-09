@@ -22,7 +22,7 @@ export function MySideBar() {
     setIsLogedIn(false);
     setAccessToken("");
     setRefreshToken("");
-    axios.get("https://rotary.shakoush.xyz/users/logout", {
+    axios.get("https://rotary.rotaryd2451.online/users/logout", {
       headers: {
         Authorization: `Bearer ${accessToken}`,
       },

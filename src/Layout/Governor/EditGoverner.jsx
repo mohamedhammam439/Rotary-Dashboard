@@ -15,7 +15,7 @@ export const GovernorEdit = () => {
     const fetchAboutUs = async () => {
       try {
         const response = await axios.get(
-          "https://rotary.shakoush.xyz/governor",
+          "https://rotary.rotaryd2451.online/governor",
           {
             headers: {
               Authorization: `Bearer ${accessToken}`,
@@ -44,7 +44,7 @@ export const GovernorEdit = () => {
       formData.append("file", values.file);
 
       const res = await fetch(
-        `https://rotary.shakoush.xyz/governor`,
+        `https://rotary.rotaryd2451.online/governor`,
         {
           method: "PUT",
           body: formData,

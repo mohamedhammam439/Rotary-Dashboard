@@ -17,7 +17,7 @@ export const AddClub = () => {
 
   const AddClubk = async (club) => {
     await axios
-      .post("https://rotary.shakoush.xyz/clubs/add", club, {
+      .post("https://rotary.rotaryd2451.online/clubs/add", club, {
         headers: {
           Authorization: `Bearer ${accessToken}`,
         },
@@ -44,7 +44,7 @@ export const AddClub = () => {
       formData.append("district", values.district);
       formData.append("file", values.file); // Append the file here
 
-      const res = await fetch(`https://rotary.shakoush.xyz/clubs/add`, {
+      const res = await fetch(`https://rotary.rotaryd2451.online/clubs/add`, {
         method: "POST",
         body: formData,
         headers: {
@@ -69,7 +69,7 @@ export const AddClub = () => {
   useEffect(() => {
     const fetchAGMembers = async () => {
       await axios
-        .get("https://rotary.shakoush.xyz/users/all-user-by-districtRole", {
+        .get("https://rotary.rotaryd2451.online/users/all-user-by-districtRole", {
           headers: {
             Authorization: `Bearer ${accessToken}`,
           },
@@ -87,7 +87,7 @@ export const AddClub = () => {
     };
     const fetchAGCMembers = async () => {
       await axios
-        .get("https://rotary.shakoush.xyz/users/all-user-by-districtRole", {
+        .get("https://rotary.rotaryd2451.online/users/all-user-by-districtRole", {
           headers: {
             Authorization: `Bearer ${accessToken}`,
           },

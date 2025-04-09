@@ -66,7 +66,7 @@ export default function ImportModal({ setOpenModal, openModal }) {
       }
 
       const res = await fetch(
-        `https://rotary.shakoush.xyz/clubs/import-clubs`,
+        `https://rotary.rotaryd2451.online/clubs/import-clubs`,
         {
           method: "POST",
           body: formData,

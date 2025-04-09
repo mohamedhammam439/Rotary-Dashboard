@@ -65,7 +65,7 @@ const hideLoader = () => {
   
     const AddMemberk = async (member) => {
       await axios
-         .post("https://rotary.shakoush.xyz/users/add-user", member, {
+         .post("https://rotary.rotaryd2451.online/users/add-user", member, {
            headers: {
              Authorization: `Bearer ${accessToken}`,
            },

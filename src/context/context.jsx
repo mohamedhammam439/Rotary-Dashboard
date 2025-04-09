@@ -26,7 +26,7 @@ export const ProviderContext = ({ children }) => {
    
       try {
         const response = await axios.post(
-          "https://rotary.shakoush.xyz/users/login",
+          "https://rotary.rotaryd2451.online/users/login",
           {
             email: values.email,
             password: values.password,
@@ -50,7 +50,7 @@ export const ProviderContext = ({ children }) => {
     const refreshToken = Cookies.get('refreshToken');
     try {
       const response = await axios.post(
-        "https://rotary.shakoush.xyz/users/refresh-token",
+        "https://rotary.rotaryd2451.online/users/refresh-token",
         null,
         {
           headers: {
@@ -71,7 +71,7 @@ export const ProviderContext = ({ children }) => {
   const fetchAllUsers = async () => {
     try {
       const response = await axios.get(
-        "https://rotary.shakoush.xyz/users/all-users",
+        "https://rotary.rotaryd2451.online/users/all-users",
         {
           headers: {
             Authorization: `Bearer ${accessToken}`,
@@ -95,7 +95,7 @@ export const ProviderContext = ({ children }) => {
   const fetchAllEmployee = async () => {
     try {
       const response = await axios.get(
-        "https://rotary.shakoush.xyz/users/all-users",
+        "https://rotary.rotaryd2451.online/users/all-users",
         {
           headers: {
             Authorization: `Bearer ${accessToken}`,
@@ -118,7 +118,7 @@ export const ProviderContext = ({ children }) => {
 
   const fetchMyProfile = async () => {
     try {
-      const response = await axios.get("https://rotary.shakoush.xyz/users/me", {
+      const response = await axios.get("https://rotary.rotaryd2451.online/users/me", {
         headers: {
           Authorization: `Bearer ${accessToken}`,
         },
@@ -140,7 +140,7 @@ export const ProviderContext = ({ children }) => {
 
   const fetchAllClubs = async () => {
     try {
-      const response = await axios.get("https://rotary.shakoush.xyz/clubs/all", {
+      const response = await axios.get("https://rotary.rotaryd2451.online/clubs/all", {
         headers: {
           Authorization: `Bearer ${accessToken}`,
         },
@@ -158,7 +158,7 @@ export const ProviderContext = ({ children }) => {
 
   const fetchCommity = async () => {
     try {
-      const response = await axios.get("https://rotary.shakoush.xyz/commities", {
+      const response = await axios.get("https://rotary.rotaryd2451.online/commities", {
         headers: {
           Authorization: `Bearer ${accessToken}`,
         },
@@ -176,7 +176,7 @@ export const ProviderContext = ({ children }) => {
   const fetchCommityMembers = async () => {
     try {
       const response = await axios.get(
-        "https://rotary.shakoush.xyz/commity-members",
+        "https://rotary.rotaryd2451.online/commity-members",
         {
           headers: {
             Authorization: `Bearer ${accessToken}`,
@@ -196,7 +196,7 @@ export const ProviderContext = ({ children }) => {
   const DeleteClub = async (id) => {
     console.log("DeletClub:>> ", id);
     try {
-      await fetch(`https://rotary.shakoush.xyz/clubs/${id}`, {
+      await fetch(`https://rotary.rotaryd2451.online/clubs/${id}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${accessToken}`,
@@ -215,7 +215,7 @@ export const ProviderContext = ({ children }) => {
   const DeleteGovernor = async (id) => {
     console.log("DeletClub:>> ", id);
     try {
-      await fetch(`https://rotary.shakoush.xyz/governor-history/${id}`, {
+      await fetch(`https://rotary.rotaryd2451.online/governor-history/${id}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${accessToken}`,
@@ -234,7 +234,7 @@ export const ProviderContext = ({ children }) => {
   const DeletUser = async (id) => {
     console.log("DeletUser:>> ", id);
     try {
-      await fetch(`https://rotary.shakoush.xyz/users/delete-user/${id}`, {
+      await fetch(`https://rotary.rotaryd2451.online/users/delete-user/${id}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${accessToken}`,
@@ -254,7 +254,7 @@ export const ProviderContext = ({ children }) => {
   const fetchGovernorHistory = async () => {
     try {
       const response = await axios.get(
-        "https://rotary.shakoush.xyz/governor-history",
+        "https://rotary.rotaryd2451.online/governor-history",
         {
           headers: {
             Authorization: `Bearer ${accessToken}`,

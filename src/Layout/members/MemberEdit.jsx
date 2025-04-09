@@ -16,7 +16,7 @@ export const MemberEdit = () => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const res = await fetch(`https://rotary.shakoush.xyz/users/user/${id}`, {
+        const res = await fetch(`https://rotary.rotaryd2451.online/users/user/${id}`, {
           headers: {
             Authorization: `Bearer ${accessToken}`,
           },
@@ -39,7 +39,7 @@ export const MemberEdit = () => {
     console.log("values :>> ", values);
     try {
       const res = await fetch(
-        `https://rotary.shakoush.xyz/users/update-user/${id}`,
+        `https://rotary.rotaryd2451.online/users/update-user/${id}`,
         {
           method: "PUT",
           headers: {

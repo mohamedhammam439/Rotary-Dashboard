@@ -29,7 +29,7 @@ const DistrictEmployee = () => {
     navigate(`/districtEmployee/employeeEdit/${id}`);
   useEffect(() => {
     axios
-      .get("https://rotary.shakoush.xyz/clubs/all", {
+      .get("https://rotary.rotaryd2451.online/clubs/all", {
         headers: {
           Authorization: `Bearer ${accessToken}`,
         },

@@ -11,7 +11,7 @@ const AboutUs = () => {
     const fetchAboutUs = async () => {
       try {
         const response = await axios.get(
-          "https://rotary.shakoush.xyz/about-us",
+          "https://rotary.rotaryd2451.online/about-us",
           {
             headers: {
               Authorization: `Bearer ${accessToken}`,

@@ -12,7 +12,7 @@ export const AddCommities = () => {
 
   const AddCommity = async (commity) => {
    await axios
-      .post("https://rotary.shakoush.xyz/commities",commity,  {
+      .post("https://rotary.rotaryd2451.online/commities",commity,  {
         headers: {
           Authorization: `Bearer ${accessToken}`,
         },

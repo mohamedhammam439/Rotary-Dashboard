@@ -14,7 +14,7 @@ export const AddEmployee = () => {
   const Clubs = allClubs
   const AddEmployee = async (employee) => {
    await axios
-      .post("https://rotary.shakoush.xyz/users/add-user", employee, {
+      .post("https://rotary.rotaryd2451.online/users/add-user", employee, {
         headers: {
           Authorization: `Bearer ${accessToken}`,
         },

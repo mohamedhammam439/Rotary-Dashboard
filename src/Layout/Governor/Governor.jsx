@@ -11,7 +11,7 @@ const Governor = () => {
     const fetchGovernor = async () => {
       try {
         const response = await axios.get(
-          "https://rotary.shakoush.xyz/governor",
+          "https://rotary.rotaryd2451.online/governor",
           {
             headers: {
               Authorization: `Bearer ${accessToken}`,

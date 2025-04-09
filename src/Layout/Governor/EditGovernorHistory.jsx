@@ -15,7 +15,7 @@ console.log('governor :>> ', governor);
   useEffect(()=>{
     const fetchGovernorbyId = async () => {
         try {
-          const res = await fetch(`https://rotary.shakoush.xyz/governor-history/${id}`, {
+          const res = await fetch(`https://rotary.rotaryd2451.online/governor-history/${id}`, {
             headers: {
               Authorization: `Bearer ${accessToken}`,
             },
@@ -45,7 +45,7 @@ console.log('governor :>> ', governor);
       formData.append("year", values.year);
       formData.append("file", values.file); // Append the file here
 
-      const res = await fetch(`https://rotary.shakoush.xyz/governor-history/${id}`, {
+      const res = await fetch(`https://rotary.rotaryd2451.online/governor-history/${id}`, {
         method: "PUT",
         body: formData,
         headers: {

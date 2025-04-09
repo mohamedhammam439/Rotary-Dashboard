@@ -16,7 +16,7 @@ export const ClubEdit = () => {
   useEffect(() => {
     const fetchClub = async () => {
       try {
-        const res = await fetch(`https://rotary.shakoush.xyz/clubs/${clubId}`, {
+        const res = await fetch(`https://rotary.rotaryd2451.online/clubs/${clubId}`, {
           headers: {
             Authorization: `Bearer ${accessToken}`,
           },
@@ -56,7 +56,7 @@ export const ClubEdit = () => {
       formData.append("file", values.file);
       
       const res = await fetch(
-        `https://rotary.shakoush.xyz/clubs/${clubId}`,
+        `https://rotary.rotaryd2451.online/clubs/${clubId}`,
         {
           method: "PUT",
           body: formData,

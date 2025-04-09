@@ -19,7 +19,7 @@ const AddGovernorHistory = () => {
           formData.append("year", values.year);
           formData.append("file", values.file); // Append the file here
     
-          const res = await fetch(`https://rotary.shakoush.xyz/governor-history`, {
+          const res = await fetch(`https://rotary.rotaryd2451.online/governor-history`, {
             method: "POST",
             body: formData,
             headers: {

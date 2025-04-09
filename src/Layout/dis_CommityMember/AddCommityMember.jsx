@@ -13,7 +13,7 @@ export const AddCommityMember = () => {
 const AddCommityMember = async (commityMember) => {
   console.log('commityMember :>> ', commityMember);
  await axios
-    .post("https://rotary.shakoush.xyz/commity-members", commityMember,  {
+    .post("https://rotary.rotaryd2451.online/commity-members", commityMember,  {
       headers: {
         Authorization: `Bearer ${accessToken}`,
       },

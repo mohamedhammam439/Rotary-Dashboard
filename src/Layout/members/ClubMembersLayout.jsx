@@ -56,7 +56,7 @@ export const ClubMembersLayout = () => {
     const fetchMembersOfClub = async () => {
       try {
         const response = await axios.get(
-          "https://rotary.shakoush.xyz/users/all-user-for-clubAdmin",
+          "https://rotary.rotaryd2451.online/users/all-user-for-clubAdmin",
           {
             headers: {
               Authorization: `Bearer ${accessToken}`,
@@ -77,7 +77,7 @@ export const ClubMembersLayout = () => {
     };
     fetchMembersOfClub()
     axios
-      .get("https://rotary.shakoush.xyz/clubs/"+ clubId, {
+      .get("https://rotary.rotaryd2451.online/clubs/"+ clubId, {
         headers: {
           Authorization: `Bearer ${accessToken}`,
         },

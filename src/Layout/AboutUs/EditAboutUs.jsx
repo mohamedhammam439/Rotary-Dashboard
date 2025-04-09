@@ -15,7 +15,7 @@ export const AboutUsEdit = () => {
     const fetchAboutUs = async () => {
       try {
         const response = await axios.get(
-          "https://rotary.shakoush.xyz/about-us",
+          "https://rotary.rotaryd2451.online/about-us",
           {
             headers: {
               Authorization: `Bearer ${accessToken}`,
@@ -44,7 +44,7 @@ export const AboutUsEdit = () => {
       formData.append("file", values.file);
 
       const res = await fetch(
-        `https://rotary.shakoush.xyz/about-us`,
+        `https://rotary.rotaryd2451.online/about-us`,
         {
           method: "PUT",
           body: formData,

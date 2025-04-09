@@ -14,7 +14,7 @@ export const ClubDetails = () => {
 useEffect(() => {
     const fetchClub = async () => {
       try {
-        const res = await fetch(`https://rotary.shakoush.xyz/clubs/${clubId}`, {
+        const res = await fetch(`https://rotary.rotaryd2451.online/clubs/${clubId}`, {
           headers: {
             Authorization: `Bearer ${accessToken}`,
           },

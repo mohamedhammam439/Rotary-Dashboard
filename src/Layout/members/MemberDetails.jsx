@@ -12,7 +12,7 @@ export const MemberDetails = () => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const res = await fetch(`https://rotary.shakoush.xyz/users/user/${id}`, {
+        const res = await fetch(`https://rotary.rotaryd2451.online/users/user/${id}`, {
           headers: {
             Authorization: `Bearer ${accessToken}`,
           },
